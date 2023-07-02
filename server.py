@@ -140,3 +140,7 @@ def add_reviews():
     
             
     return jsonify(json_util.dumps({"message": "success"})), 200
+
+
+def create_app():
+   return app
