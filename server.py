@@ -2,10 +2,10 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from flask_pymongo import PyMongo
 from bson import json_util
+import openai
 
 mongo = PyMongo()
 
-import openai
 
 openai.api_key = "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"
 
