@@ -3,14 +3,17 @@ from flask_cors import CORS
 from flask_pymongo import PyMongo
 from bson import json_util
 import openai
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 mongo = PyMongo()
 
 
-openai.api_key = "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"
+openai.api_key = os.getenv("OPEN_API_KEY")
 
 app = Flask(__name__)
-app.config['MONGO_URI'] = "mongodb+srv://kushaangowda2001:kushaangowda2001@cluster0.llhzsno.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+app.config['MONGO_URI'] = os.getenv("MONGO_URI")
 
 mongo.init_app(app)
 db = mongo.db
