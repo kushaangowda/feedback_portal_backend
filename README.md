@@ -31,6 +31,13 @@ Build an API endpoint that integrates an LLM (either GPT or an open-source model
 2. Backend: Flask, OpenAI API
 3. Database: MongoDB
 
+## Installation
+
+1. Clone the repository
+2. Install the requirements `$ pip install -r requirements.txt`
+3. Create a .env file with the following keys: OPEN_API_KEY, MONGO_URI
+4. Start the server `$ flask --app server run`
+
 ## References
 
 1. Reviews dataset from Kaggle: [https://www.kaggle.com/datasets/parve05/customer-review-dataset?resource=download](https://www.kaggle.com/datasets/parve05/customer-review-dataset?resource=download)
